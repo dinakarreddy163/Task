@@ -1,0 +1,28 @@
+
+<div class="container">
+<button class="btn btn-primary" routerLink="createUser" style="margin-left: 950px;margin-top:42px">Create User</button>       
+  <table class="table" data-sort-order="desc" style="margin: 24px;">
+    <thead>
+      <tr>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Age</th>
+        <th>Created On</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let datalist of list">
+      <tr>
+       <td>{{datalist.user_name}}</td>
+       <td>{{datalist.user_email}}</td>
+       <td>{{datalist.user_phone}}</td>
+       <td>{{datalist.user_age}}</td>
+       <td>{{datalist.created_on}}</td>
+       <td>{{datalist.user_status}}</td>
+       <td><button class="la la-edit btn btn-success" (click)="editUser(datalist.user_id)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
